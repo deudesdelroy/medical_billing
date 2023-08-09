@@ -11,6 +11,16 @@ return new class extends Migration
     {
         Schema::create('companies', function (Blueprint $table) {
             $table->id();
+            $table->tinyInteger('id_type');
+            $table->string('id_number');
+            $table->tinyInteger('check_digit');
+            $table->string('business_name');
+            $table->string('address');
+            $table->string('country');
+            $table->string('city');
+            $table->string('main_phone_number');
+            $table->string('second_phone_number')->nullable();
+            $table->string('email');
             $table->timestamps();
         });
     }
